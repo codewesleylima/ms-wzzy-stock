@@ -17,6 +17,10 @@ public class StockItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long stockItemId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "inventory_id")
+    private InventoryEntity inventory;
+
     @Column(nullable = false, unique = true)
     private Long bookId;
 

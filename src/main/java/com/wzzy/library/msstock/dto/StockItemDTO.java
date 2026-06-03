@@ -11,9 +11,12 @@ import java.time.LocalDateTime;
 public class StockItemDTO {
 
     private Long stockItemIdDTO;
+    private InventoryDTO inventoryDTO;
     private Long bookIdDTO;
     private Integer quantityDTO;
     private Integer reorderLevelDTO;
     private String warehouseLocationDTO;
     private LocalDateTime lastUpdatedDTO;
+    private LocalDateTime createdAtDTO;
+    private LocalDateTime updatedAtDTO;
 }
