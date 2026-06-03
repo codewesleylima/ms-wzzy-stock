@@ -15,29 +15,29 @@ public class StockItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long stockItemId;
+    private Long stockItemIdEntity;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "inventory_id")
-    private InventoryEntity inventory;
+    private InventoryEntity inventoryEntity;
 
     @Column(nullable = false, unique = true)
-    private Long bookId;
+    private Long bookIdEntity;
 
     @Column(nullable = false)
-    private Integer quantity;
+    private Integer quantityEntity;
 
     @Column(nullable = false)
-    private Integer reorderLevel;
+    private Integer reorderLevelEntity;
 
-    private String warehouseLocation;
+    private String warehouseLocationEntity;
 
     @Column(nullable = false)
-    private LocalDateTime lastUpdated = LocalDateTime.now();
+    private LocalDateTime lastUpdatedEntity = LocalDateTime.now();
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 
     @Column(nullable = false)
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private LocalDateTime updatedAtEntity = LocalDateTime.now();
 }

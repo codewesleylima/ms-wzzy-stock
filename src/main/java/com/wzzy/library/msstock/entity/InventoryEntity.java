@@ -18,26 +18,26 @@ public class InventoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID inventoryId;
+    private UUID inventoryIdEntity;
 
-    private String warehouseName;
-    private String location;
-    private String status;
+    private String warehouseNameEntity;
+    private String locationEntity;
+    private String statusEntity;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "inventory")
-    private List<StockItem> stockItems;
+    private List<StockItem> stockItemsEntity;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "inventory_id")
-    private List<StockMovement> stockMovements;
+    private List<StockMovement> stockMovementsEntity;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "inventory_id")
-    private List<Reservation> reservations;
+    private List<Reservation> reservationsEntity;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 
     @Column(nullable = false)
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private LocalDateTime updatedAtEntity = LocalDateTime.now();
 }

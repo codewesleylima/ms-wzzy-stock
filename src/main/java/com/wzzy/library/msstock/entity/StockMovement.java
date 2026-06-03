@@ -15,25 +15,25 @@ public class StockMovement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long stockMovementId;
+    private Long stockMovementIdEntity;
 
     @ManyToOne
     @JoinColumn(name = "stock_item_id", nullable = false)
-    private StockItem stockItem;
+    private StockItem stockItemEntity;
 
     @Column(nullable = false)
-    private String movementType;
+    private String movementTypeEntity;
 
     @Column(nullable = false)
-    private Integer quantity;
+    private Integer quantityEntity;
 
-    private String reason;
+    private String reasonEntity;
 
     @Column(nullable = false)
-    private LocalDateTime date = LocalDateTime.now();
+    private LocalDateTime dateEntity = LocalDateTime.now();
 
-    private Long userId;
+    private Long userIdEntity;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 }

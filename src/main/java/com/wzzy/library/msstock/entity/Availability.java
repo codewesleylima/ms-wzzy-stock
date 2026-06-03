@@ -15,23 +15,23 @@ public class Availability {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long availabilityId;
+    private Long availabilityIdEntity;
 
     @Column(nullable = false, unique = true)
-    private Long bookId;
+    private Long bookIdEntity;
 
     @Column(nullable = false)
-    private String status;
+    private String statusEntity;
 
     @Column(nullable = false)
-    private Integer quantityAvailable;
+    private Integer quantityAvailableEntity;
 
     @Column(nullable = false)
-    private LocalDateTime lastChecked = LocalDateTime.now();
+    private LocalDateTime lastCheckedEntity = LocalDateTime.now();
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 
     @Column(nullable = false)
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private LocalDateTime updatedAtEntity = LocalDateTime.now();
 }

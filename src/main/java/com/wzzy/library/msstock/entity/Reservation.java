@@ -15,30 +15,30 @@ public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reservationId;
+    private Long reservationIdEntity;
 
     @Column(nullable = false)
-    private Long customerId;
+    private Long customerIdEntity;
 
     @Column(nullable = false)
-    private Long bookId;
+    private Long bookIdEntity;
 
-    private Long orderId;
-
-    @Column(nullable = false)
-    private Integer reservedQuantity;
+    private Long orderIdEntity;
 
     @Column(nullable = false)
-    private LocalDateTime reservationDate = LocalDateTime.now();
-
-    private LocalDateTime expiryDate;
+    private Integer reservedQuantityEntity;
 
     @Column(nullable = false)
-    private String status = "ACTIVE";
+    private LocalDateTime reservationDateEntity = LocalDateTime.now();
+
+    private LocalDateTime expiryDateEntity;
+
+    @Column(nullable = false)
+    private String statusEntity = "ACTIVE";
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAtEntity = LocalDateTime.now();
 
     @Column(nullable = false)
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private LocalDateTime updatedAtEntity = LocalDateTime.now();
 }
