@@ -15,7 +15,7 @@ public class StockItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long stockItemId;
 
     @Column(nullable = false, unique = true)
     private Long bookId;

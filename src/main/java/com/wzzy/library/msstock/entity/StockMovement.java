@@ -15,7 +15,7 @@ public class StockMovement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long stockMovementId;
 
     @ManyToOne
     @JoinColumn(name = "stock_item_id", nullable = false)

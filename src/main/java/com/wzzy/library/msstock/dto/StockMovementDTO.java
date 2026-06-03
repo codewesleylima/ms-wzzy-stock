@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class StockMovementDTO {
 
-    private Long id;
-    private Long stockItemId;
-    private String movementType;
-    private Integer quantity;
-    private String reason;
-    private LocalDateTime date;
-    private Long userId;
+    private Long stockMovementIdDTO;
+    private Long stockItemIdDTO;
+    private String movementTypeDTO;
+    private Integer quantityDTO;
+    private String reasonDTO;
+    private LocalDateTime dateDTO;
+    private Long userIdDTO;
 }

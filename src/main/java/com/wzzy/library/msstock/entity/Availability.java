@@ -15,7 +15,7 @@ public class Availability {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long availabilityId;
 
     @Column(nullable = false, unique = true)
     private Long bookId;

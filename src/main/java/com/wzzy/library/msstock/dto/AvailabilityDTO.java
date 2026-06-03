@@ -10,9 +10,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class AvailabilityDTO {
 
-    private Long id;
-    private Long bookId;
-    private String status;
-    private Integer quantityAvailable;
-    private LocalDateTime lastChecked;
+    private Long availabilityIdDTO;
+    private Long bookIdDTO;
+    private String statusDTO;
+    private Integer quantityAvailableDTO;
+    private LocalDateTime lastCheckedDTO;
 }
